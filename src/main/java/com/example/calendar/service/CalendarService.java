@@ -3,7 +3,7 @@ package com.example.calendar.service;
 import com.example.calendar.model.CalendarYear;
 
 /**
- * Предоставляет операции для работы с календарем
+ * Предоставляет операции для работы с календарями
  */
 public interface CalendarService {
 

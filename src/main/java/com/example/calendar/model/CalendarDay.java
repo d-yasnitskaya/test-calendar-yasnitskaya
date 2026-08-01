@@ -1,6 +1,7 @@
 package com.example.calendar.model;
 
 import java.time.DayOfWeek;
+import java.util.Objects;
 
 /**
  * Один день календарного месяца
@@ -17,8 +18,12 @@ public class CalendarDay {
      * @param dayOfWeek день недели
      */
     public CalendarDay(int dayOfMonth, DayOfWeek dayOfWeek) {
+        if (dayOfMonth < 1 || dayOfMonth > 31) {
+            throw new IllegalArgumentException("Номер дня должен находиться в диапазоне от 1 до 31");
+        }
+
         this.dayOfMonth = dayOfMonth;
-        this.dayOfWeek = dayOfWeek;
+        this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "День недели не должен быть null");
     }
 
     /**

@@ -1,6 +1,7 @@
 package com.example.calendar.model;
 
 import java.time.Year;
+import java.util.Objects;
 
 /**
  * Один год
@@ -10,31 +11,16 @@ public class CalendarYear {
     private final Year year;
     private final CalendarTemplate template;
 
-    /**
-     * Создаёт календарь указанного года на основе готового шаблона
-     *
-     * @param year год
-     * @param template шаблон календаря
-     */
     public CalendarYear(Year year, CalendarTemplate template) {
-        this.year = year;
-        this.template = template;
+        this.year = Objects.requireNonNull(year, "Год не должен быть null");
+
+        this.template = Objects.requireNonNull(template, "Шаблон календаря не должен быть null");
     }
 
-    /**
-     * Возвращает год календаря
-     *
-     * @return год
-     */
     public Year getYear() {
         return year;
     }
 
-    /**
-     * Возвращает шаблон календаря
-     *
-     * @return шаблон календаря
-     */
     public CalendarTemplate getTemplate() {
         return template;
     }
