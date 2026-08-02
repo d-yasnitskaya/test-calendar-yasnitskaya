@@ -13,7 +13,7 @@ public interface CalendarFactory {
      * Создаёт шаблон календаря
      *
      * @param firstDayOfYear день недели первого января
-     * @param leapYear признак високосного года
+     * @param leapYear       признак високосного года
      * @return шаблон календарного года
      */
     CalendarTemplate create(DayOfWeek firstDayOfYear, boolean leapYear);

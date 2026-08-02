@@ -7,7 +7,7 @@ import java.util.Objects;
  * Ключ для поиска шаблона календаря. Всего 14 шаблонов
  *
  * @param firstDayOfYear день недели первого января
- * @param leapYear признак високосного года
+ * @param leapYear       признак високосного года
  */
 public record CalendarTemplateKey(DayOfWeek firstDayOfYear, boolean leapYear) {
 

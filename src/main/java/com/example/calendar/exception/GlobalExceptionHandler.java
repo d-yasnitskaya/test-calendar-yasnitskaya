@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
      * Обрабатывает отсутствие шаблона календаря
      *
      * @param exception возникшее исключение
-     * @param request HTTP-запрос
+     * @param request   HTTP-запрос
      * @return информация об ошибке
      */
     @ExceptionHandler(CalendarTemplateNotFoundException.class)
@@ -39,7 +39,7 @@ public class GlobalExceptionHandler {
      * Обрабатывает ошибки проверки входных данных
      *
      * @param exception возникшее исключение
-     * @param request HTTP-запрос
+     * @param request   HTTP-запрос
      * @return информация об ошибке
      */
     @ExceptionHandler(IllegalArgumentException.class)
@@ -58,7 +58,7 @@ public class GlobalExceptionHandler {
      * Обрабатывает ошибки аннотаций валидации
      *
      * @param exception возникшее исключение
-     * @param request HTTP-запрос
+     * @param request   HTTP-запрос
      * @return информация об ошибке
      */
     @ExceptionHandler(HandlerMethodValidationException.class)
@@ -84,7 +84,7 @@ public class GlobalExceptionHandler {
      * Обрабатывает неверный тип параметра
      *
      * @param exception возникшее исключение
-     * @param request HTTP-запрос
+     * @param request   HTTP-запрос
      * @return информация об ошибке
      */
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
@@ -107,7 +107,7 @@ public class GlobalExceptionHandler {
      * Обрабатывает остальные ошибки приложения
      *
      * @param exception возникшее исключение
-     * @param request HTTP-запрос
+     * @param request   HTTP-запрос
      * @return информация об ошибке
      */
     @ExceptionHandler(Exception.class)
@@ -125,9 +125,9 @@ public class GlobalExceptionHandler {
     /**
      * Формирует ответ с информацией об ошибке
      *
-     * @param status HTTP-статус
+     * @param status  HTTP-статус
      * @param message описание ошибки
-     * @param path адрес запроса
+     * @param path    адрес запроса
      * @return информация об ошибке
      */
     private ResponseEntity<ErrorResponse> buildResponse(

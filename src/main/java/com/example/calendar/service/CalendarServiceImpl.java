@@ -59,10 +59,11 @@ public class CalendarServiceImpl implements CalendarService {
 
         return new CalendarYear(requestedYear, template);
     }
+
     /**
      * Возвращает указанный месяц выбранного года
      *
-     * @param year номер года
+     * @param year        номер года
      * @param monthNumber номер месяца от 1 до 12
      * @return календарный месяц
      */
@@ -79,9 +80,9 @@ public class CalendarServiceImpl implements CalendarService {
     /**
      * Возвращает указанный день выбранного месяца и года
      *
-     * @param year номер года
+     * @param year        номер года
      * @param monthNumber номер месяца от 1 до 12
-     * @param dayNumber номер дня месяца
+     * @param dayNumber   номер дня месяца
      * @return календарный день
      */
     @Override
@@ -149,7 +150,7 @@ public class CalendarServiceImpl implements CalendarService {
      * Проверяет корректность номера дня с учётом месяца
      *
      * @param dayNumber номер дня
-     * @param month календарный месяц
+     * @param month     календарный месяц
      */
     private void validateDay(
             int dayNumber,

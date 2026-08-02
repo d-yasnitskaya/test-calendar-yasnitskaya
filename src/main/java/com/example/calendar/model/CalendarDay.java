@@ -34,7 +34,7 @@ public class CalendarDay {
      * Создаёт календарный день
      *
      * @param dayOfMonth порядковый номер дня в месяце
-     * @param dayOfWeek день недели
+     * @param dayOfWeek  день недели
      */
     public CalendarDay(int dayOfMonth, DayOfWeek dayOfWeek) {
         if (dayOfMonth < 1 || dayOfMonth > 31) {

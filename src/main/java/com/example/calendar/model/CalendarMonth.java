@@ -32,7 +32,7 @@ public class CalendarMonth {
      * Создаёт календарный месяц
      *
      * @param month месяц года
-     * @param days список дней месяца
+     * @param days  список дней месяца
      */
     public CalendarMonth(Month month, List<CalendarDay> days) {
         this.month = Objects.requireNonNull(month, "Месяц не должен быть null");

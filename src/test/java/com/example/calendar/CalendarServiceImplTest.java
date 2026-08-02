@@ -2,11 +2,7 @@ package com.example.calendar;
 
 import com.example.calendar.factory.CalendarFactory;
 import com.example.calendar.factory.CalendarFactoryImpl;
-import com.example.calendar.model.CalendarDay;
-import com.example.calendar.model.CalendarMonth;
 import com.example.calendar.model.CalendarTemplate;
-import com.example.calendar.model.CalendarTemplateKey;
-import com.example.calendar.model.CalendarYear;
 import com.example.calendar.service.CalendarService;
 import com.example.calendar.service.CalendarServiceImpl;
 import com.example.calendar.storage.CalendarTemplateStorage;
@@ -14,12 +10,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.DayOfWeek;
-import java.time.Month;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -50,8 +44,7 @@ class CalendarServiceImplTest {
     @Test
     void shouldReturnAllTemplates() {
         List<CalendarTemplate> templates = List.of(calendarFactory.create(DayOfWeek.MONDAY, false),
-                calendarFactory.create(DayOfWeek.MONDAY, true)
-        );
+                calendarFactory.create(DayOfWeek.MONDAY, true));
 
         when(templateStorage.getAll()).thenReturn(templates);
 

@@ -12,8 +12,8 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "calendar_templates", uniqueConstraints = {
-                @UniqueConstraint(name = "uk_template_first_day_leap_year", columnNames = {"first_day_of_year", "leap_year"})
-        }
+        @UniqueConstraint(name = "uk_template_first_day_leap_year", columnNames = {"first_day_of_year", "leap_year"})
+}
 )
 public class CalendarTemplateEntity {
 
@@ -58,7 +58,7 @@ public class CalendarTemplateEntity {
      * Создаёт сущность шаблона календаря
      *
      * @param firstDayOfYear день недели первого января
-     * @param leapYear признак високосного года
+     * @param leapYear       признак високосного года
      */
     public CalendarTemplateEntity(DayOfWeek firstDayOfYear, boolean leapYear) {
         this.firstDayOfYear = Objects.requireNonNull(firstDayOfYear, "День недели первого января не должен быть null");

@@ -49,7 +49,7 @@ public class CalendarDayEntity {
      * Создаёт сущность календарного дня
      *
      * @param dayOfMonth номер дня в месяце
-     * @param dayOfWeek день недели
+     * @param dayOfWeek  день недели
      */
     public CalendarDayEntity(
             int dayOfMonth,

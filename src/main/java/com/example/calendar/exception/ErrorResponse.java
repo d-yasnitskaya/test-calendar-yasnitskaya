@@ -6,10 +6,10 @@ import java.time.LocalDateTime;
  * Ответ с информацией об ошибке
  *
  * @param timestamp дата и время возникновения ошибки
- * @param status HTTP-статус
- * @param error название ошибки
- * @param message описание ошибки
- * @param path адрес запроса
+ * @param status    HTTP-статус
+ * @param error     название ошибки
+ * @param message   описание ошибки
+ * @param path      адрес запроса
  */
 public record ErrorResponse(
         LocalDateTime timestamp,

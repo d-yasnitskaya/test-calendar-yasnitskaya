@@ -22,7 +22,7 @@ public class CalendarFactoryImpl implements CalendarFactory {
      * Создаёт шаблон календарного года
      *
      * @param firstDayOfYear день недели, на который приходится первое января
-     * @param leapYear признак високосного года
+     * @param leapYear       признак високосного года
      * @return готовый шаблон календаря
      * @throws NullPointerException если день недели не указан
      */
@@ -51,8 +51,8 @@ public class CalendarFactoryImpl implements CalendarFactory {
     /**
      * Создаёт один календарный месяц
      *
-     * @param month месяц года
-     * @param leapYear признак високосного года
+     * @param month           месяц года
+     * @param leapYear        признак високосного года
      * @param firstDayOfMonth день недели первого числа месяца
      * @return созданный календарный месяц
      */
@@ -67,7 +67,7 @@ public class CalendarFactoryImpl implements CalendarFactory {
     /**
      * Создаёт список дней месяца
      *
-     * @param daysInMonth количество дней в месяце
+     * @param daysInMonth     количество дней в месяце
      * @param firstDayOfMonth день недели первого числа месяца
      * @return список календарных дней
      */
@@ -91,7 +91,7 @@ public class CalendarFactoryImpl implements CalendarFactory {
      * Рассчитывает день недели первого числа следующего месяца
      *
      * @param firstDayOfMonth день недели первого числа текущего месяца
-     * @param daysInMonth количество дней в текущем месяце
+     * @param daysInMonth     количество дней в текущем месяце
      * @return день недели первого числа следующего месяца
      */
     private DayOfWeek calculateNextMonthFirstDay(DayOfWeek firstDayOfMonth, int daysInMonth) {

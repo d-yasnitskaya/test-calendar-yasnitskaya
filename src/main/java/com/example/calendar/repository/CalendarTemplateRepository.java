@@ -18,7 +18,7 @@ public interface CalendarTemplateRepository extends JpaRepository<CalendarTempla
      * и признаку високосного года
      *
      * @param firstDayOfYear день недели первого января
-     * @param leapYear признак високосного года
+     * @param leapYear       признак високосного года
      * @return найденный шаблон
      */
     @EntityGraph(attributePaths = {"months", "months.days"})
@@ -40,7 +40,7 @@ public interface CalendarTemplateRepository extends JpaRepository<CalendarTempla
      * Проверяет наличие шаблона
      *
      * @param firstDayOfYear день недели первого января
-     * @param leapYear признак високосного года
+     * @param leapYear       признак високосного года
      * @return true если шаблон существует
      */
     boolean existsByFirstDayOfYearAndLeapYear(

@@ -11,8 +11,8 @@ import java.util.List;
  */
 @Entity
 @Table(name = "calendar_months", uniqueConstraints = {
-                @UniqueConstraint(name = "uk_template_month_number", columnNames = {"template_id", "month_number"})
-        }
+        @UniqueConstraint(name = "uk_template_month_number", columnNames = {"template_id", "month_number"})
+}
 )
 public class CalendarMonthEntity {
 

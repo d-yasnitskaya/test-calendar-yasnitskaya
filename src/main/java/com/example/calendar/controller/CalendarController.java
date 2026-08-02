@@ -75,7 +75,7 @@ public class CalendarController {
     /**
      * Возвращает указанный месяц выбранного года
      *
-     * @param year номер года
+     * @param year        номер года
      * @param monthNumber номер месяца
      * @return календарный месяц
      */
@@ -113,9 +113,9 @@ public class CalendarController {
     /**
      * Возвращает указанный календарный день
      *
-     * @param year номер года
+     * @param year        номер года
      * @param monthNumber номер месяца
-     * @param dayNumber номер дня месяца
+     * @param dayNumber   номер дня месяца
      * @return календарный день
      */
     @Operation(
