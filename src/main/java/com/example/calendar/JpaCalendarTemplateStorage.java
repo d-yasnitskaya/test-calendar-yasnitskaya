@@ -1,6 +1,7 @@
 package com.example.calendar.storage;
 
 import com.example.calendar.entity.CalendarTemplateEntity;
+import com.example.calendar.exception.CalendarTemplateNotFoundException;
 import com.example.calendar.factory.CalendarFactory;
 import com.example.calendar.mapper.CalendarTemplateMapper;
 import com.example.calendar.model.CalendarTemplate;
@@ -60,7 +61,7 @@ public class JpaCalendarTemplateStorage implements CalendarTemplateStorage {
 
         CalendarTemplateEntity entity = repository
                 .findByFirstDayOfYearAndLeapYear(key.firstDayOfYear(), key.leapYear())
-                .orElseThrow(() -> new IllegalArgumentException("Шаблон календаря не найден: " + key));
+                .orElseThrow(() -> new CalendarTemplateNotFoundException("Шаблон календаря не найден: " + key));
 
         return mapper.toModel(entity);
     }
