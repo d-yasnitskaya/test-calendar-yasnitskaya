@@ -1,7 +1,5 @@
-package com.example.calendar;
+package com.example.calendar.factory;
 
-import com.example.calendar.factory.CalendarFactory;
-import com.example.calendar.factory.CalendarFactoryImpl;
 import com.example.calendar.model.CalendarMonth;
 import com.example.calendar.model.CalendarTemplate;
 import org.junit.jupiter.api.BeforeEach;

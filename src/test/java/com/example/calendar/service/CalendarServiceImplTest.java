@@ -1,10 +1,8 @@
-package com.example.calendar;
+package com.example.calendar.service;
 
 import com.example.calendar.factory.CalendarFactory;
 import com.example.calendar.factory.CalendarFactoryImpl;
 import com.example.calendar.model.CalendarTemplate;
-import com.example.calendar.service.CalendarService;
-import com.example.calendar.service.CalendarServiceImpl;
 import com.example.calendar.storage.CalendarTemplateStorage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
