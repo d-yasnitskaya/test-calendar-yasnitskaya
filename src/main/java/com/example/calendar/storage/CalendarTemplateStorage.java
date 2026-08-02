@@ -3,16 +3,25 @@ package com.example.calendar.storage;
 import com.example.calendar.model.CalendarTemplate;
 import com.example.calendar.model.CalendarTemplateKey;
 
+import java.util.List;
+
 /**
- * Предоставляет доступ к сохранённым шаблонам календаря
+ * Хранилище шаблонов календаря
  */
 public interface CalendarTemplateStorage {
 
     /**
-     * Возвращает шаблон календаря по указанному ключу
+     * Возвращает шаблон по ключу
      *
      * @param key ключ шаблона
-     * @return найденный шаблон календаря
+     * @return шаблон календаря
      */
     CalendarTemplate get(CalendarTemplateKey key);
+
+    /**
+     * Возвращает все шаблоны календаря
+     *
+     * @return список шаблонов
+     */
+    List<CalendarTemplate> getAll();
 }

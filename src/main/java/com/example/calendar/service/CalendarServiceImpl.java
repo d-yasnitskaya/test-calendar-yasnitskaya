@@ -100,15 +100,7 @@ public class CalendarServiceImpl implements CalendarService {
      */
     @Override
     public List<CalendarTemplate> getAllTemplates() {
-        List<CalendarTemplate> templates = new ArrayList<>();
-
-        for (DayOfWeek firstDayOfYear : DayOfWeek.values()) {
-            templates.add(templateStorage.get(new CalendarTemplateKey(firstDayOfYear, false)));
-
-            templates.add(templateStorage.get(new CalendarTemplateKey(firstDayOfYear, true)));
-        }
-
-        return List.copyOf(templates);
+        return templateStorage.getAll();
     }
 
     /**
