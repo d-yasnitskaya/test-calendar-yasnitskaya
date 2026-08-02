@@ -1,22 +1,34 @@
 package com.example.calendar.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import java.time.DayOfWeek;
 import java.util.Objects;
 
 /**
  * Один день календарного месяца
  */
+@JsonPropertyOrder({
+        "dayOfMonth",
+        "dayOfWeekName"
+})
 public class CalendarDay {
 
     /*
-    * Номер дня в месяце
-    */
+     * Номер дня в месяце
+     */
     private final int dayOfMonth;
 
     /*
-    * День недели
-    */
+     * День недели
+     */
     private final DayOfWeek dayOfWeek;
+
+    /*
+     * Название дня недели на русском языке
+     */
+    private final String dayOfWeekName;
 
     /**
      * Создаёт календарный день
@@ -30,7 +42,9 @@ public class CalendarDay {
         }
 
         this.dayOfMonth = dayOfMonth;
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "День недели не должен быть null");
+        this.dayOfWeek = Objects.requireNonNull(
+                dayOfWeek, "День недели не должен быть null");
+        this.dayOfWeekName = getRussianDayOfWeekName(dayOfWeek);
     }
 
     /**
@@ -47,7 +61,35 @@ public class CalendarDay {
      *
      * @return день недели
      */
+    @JsonIgnore
     public DayOfWeek getDayOfWeek() {
         return dayOfWeek;
+    }
+
+    /**
+     * Возвращает название дня недели на русском языке
+     *
+     * @return название дня недели
+     */
+    public String getDayOfWeekName() {
+        return dayOfWeekName;
+    }
+
+    /**
+     * Возвращает название дня недели на русском языке
+     *
+     * @param dayOfWeek день недели
+     * @return название дня недели
+     */
+    private String getRussianDayOfWeekName(DayOfWeek dayOfWeek) {
+        return switch (dayOfWeek) {
+            case MONDAY -> "Понедельник";
+            case TUESDAY -> "Вторник";
+            case WEDNESDAY -> "Среда";
+            case THURSDAY -> "Четверг";
+            case FRIDAY -> "Пятница";
+            case SATURDAY -> "Суббота";
+            case SUNDAY -> "Воскресенье";
+        };
     }
 }
