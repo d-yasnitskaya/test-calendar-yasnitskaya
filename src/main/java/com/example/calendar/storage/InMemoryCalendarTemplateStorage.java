@@ -4,6 +4,7 @@ import com.example.calendar.factory.CalendarFactory;
 import com.example.calendar.model.CalendarTemplate;
 import com.example.calendar.model.CalendarTemplateKey;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.time.DayOfWeek;
 import java.util.HashMap;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Хранит все 14 возможных шаблонов календарного года
  *
  */
-@Component
+@Service
 public class InMemoryCalendarTemplateStorage implements CalendarTemplateStorage {
 
     private final Map<CalendarTemplateKey, CalendarTemplate> templates;
@@ -71,13 +72,12 @@ public class InMemoryCalendarTemplateStorage implements CalendarTemplateStorage 
     /**
      * Создаёт один шаблон календаря и добавляет его в карту
      *
-     * @param templates карта шаблонов
+     * @param templates       карта шаблонов
      * @param calendarFactory фабрика шаблонов
-     * @param firstDayOfYear день недели первого января
-     * @param leapYear признак високосного года
+     * @param firstDayOfYear  день недели первого января
+     * @param leapYear        признак високосного года
      */
-    private void addTemplate(Map<CalendarTemplateKey, CalendarTemplate> templates,
-            CalendarFactory calendarFactory, DayOfWeek firstDayOfYear, boolean leapYear) {
+    private void addTemplate(Map<CalendarTemplateKey, CalendarTemplate> templates, CalendarFactory calendarFactory, DayOfWeek firstDayOfYear, boolean leapYear) {
         CalendarTemplateKey key = new CalendarTemplateKey(firstDayOfYear, leapYear);
 
         CalendarTemplate template = calendarFactory.create(firstDayOfYear, leapYear);

@@ -9,9 +9,17 @@ import java.util.Objects;
  */
 
 public class CalendarTemplate {
-
+    /**
+     * День недели
+     */
     private final DayOfWeek firstDayOfYear;
+    /*
+     * Високосный год
+     */
     private final boolean leapYear;
+    /*
+     * Список месяцев
+     */
     private final List<CalendarMonth> months;
 
     public CalendarTemplate(DayOfWeek firstDayOfYear, boolean leapYear, List<CalendarMonth> months) {

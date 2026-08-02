@@ -8,7 +8,14 @@ import java.util.Objects;
  */
 public class CalendarYear {
 
+    /*
+    * Год календаря
+    */
     private final Year year;
+
+    /*
+    * Шаблон календаря для указанного года
+    */
     private final CalendarTemplate template;
 
     public CalendarYear(Year year, CalendarTemplate template) {

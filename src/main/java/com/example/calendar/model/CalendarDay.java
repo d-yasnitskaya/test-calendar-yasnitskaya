@@ -8,7 +8,14 @@ import java.util.Objects;
  */
 public class CalendarDay {
 
+    /*
+    * Номер дня в месяце
+    */
     private final int dayOfMonth;
+
+    /*
+    * День недели
+    */
     private final DayOfWeek dayOfWeek;
 
     /**

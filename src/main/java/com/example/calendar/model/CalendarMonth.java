@@ -9,7 +9,14 @@ import java.util.Objects;
  */
 public class CalendarMonth {
 
+    /*
+    * Месяц года
+    */
     private final Month month;
+
+    /*
+    * Список дней месяца
+    */
     private final List<CalendarDay> days;
 
     public CalendarMonth(Month month, List<CalendarDay> days) {

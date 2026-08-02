@@ -10,7 +10,7 @@ import java.time.DayOfWeek;
 public interface CalendarFactory {
 
     /**
-     * Создаёт шаблон календаря.
+     * Создаёт шаблон календаря
      *
      * @param firstDayOfYear день недели первого января
      * @param leapYear признак високосного года
